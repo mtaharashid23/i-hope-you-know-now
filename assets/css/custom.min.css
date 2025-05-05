@@ -409,7 +409,7 @@ html.lenis body {
 	border: 5px double var(--cta-btn);
 	background: var(--section-divider);
 	padding: 1.25rem;
-	min-height: 330px;
+	min-height: 430px;
 }
 
 .banner_card_img {
