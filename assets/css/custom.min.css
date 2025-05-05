@@ -10,10 +10,11 @@
 :root {
 	--white: #FFFFFF;
 	--black: #000000;
-	--primary: #FFD700;
-	--secondary: #A4C639;
-	--body-color: #FDFDFD;
-	--light-grey: #EDEDED;
+	--primary: #FFD166;
+	--secondary: #FFD166;	
+	--body-color: #121212;
+	--section-divider: #1E1E1E;
+	--cta-btn: #FFD166;
 	--gradient-primary: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
 	--gradient-secondary: linear-gradient(180deg, var(--secondary) 100%, var(--primary) 20%);
 	--font-poppins: "Poppins", sans-serif;
@@ -46,9 +47,9 @@ html {
 
 body {
 	font-family: var(--font-poppins);
-	overflow-x: clip;	
+	overflow-x: clip;
 	background: var(--body-color);
-	color: var(--black);
+	color: var(--white);
 }
 
 a,
@@ -234,7 +235,7 @@ html.lenis body {
 .themeBtn {
 	width: fit-content;
 	display: block;
-	background: var(--primary);
+	background: var(--cta-btn);
 	color: var(--black);
 	font-size: 1rem;
 	font-weight: 500;
@@ -277,7 +278,7 @@ html.lenis body {
 .mainHeading {
 	font-size: 3.125rem;
 	font-weight: bold;
-	color: var(--black);
+	color: var(--white);
 	text-transform: uppercase;
 }
 
@@ -290,7 +291,6 @@ html.lenis body {
 /* HEADER */
 .header {
 	padding: 1rem 0;
-	background: var(--black);
 	transition: 0.3s ease-in-out;
 }
 
@@ -334,7 +334,7 @@ html.lenis body {
 	content: "";
 	width: 0;
 	height: 2px;
-	background: var(--primary);
+	background: var(--cta-btn);
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -365,7 +365,7 @@ html.lenis body {
 	position: absolute;
 	inset: 0;
 	background-color: transparent;
-	background-image: linear-gradient(360deg, var(--primary) 10%, #07070470 50%);
+	background-image: linear-gradient(360deg, var(--primary) -20%, #07070470 40%);
 	user-select: none;
 }
 
@@ -379,7 +379,7 @@ html.lenis body {
 	font-weight: bold;
 	text-transform: uppercase;
 	line-height: 1;
-	margin: 0;	
+	margin: 0;
 	color: var(--white);
 }
 
@@ -406,8 +406,8 @@ html.lenis body {
 }
 
 .banner_card {
-	border: 5px double var(--primary);
-	background: var(--white);
+	border: 5px double var(--cta-btn);
+	background: var(--section-divider);
 	padding: 1.25rem;
 	min-height: 330px;
 }
@@ -416,7 +416,7 @@ html.lenis body {
 	width: 100px;
 	aspect-ratio: 1;
 	border-radius: 50%;
-	background: var(--primary);
+	background: var(--cta-btn);
 	margin: 0 auto 1rem;
 	display: grid;
 	place-items: center;
@@ -433,12 +433,12 @@ html.lenis body {
 	font-family: var(--font-poppins);
 	font-weight: bold;
 	text-transform: uppercase;
-	color: var(--black);
+	color: var(--white);
 }
 
 .banner_card_content p {
 	margin: 0;
-	color: var(--black);
+	color: var(--white);
 }
 
 /* about-section */
@@ -451,7 +451,7 @@ html.lenis body {
 }
 
 .about-img img {
-	box-shadow: -15px 15px 0px 0px #ffffff;
+	box-shadow: -15px 15px 0px 0px var(--primary);
 	width: 88%;
 	object-fit: cover;
 }
@@ -472,7 +472,7 @@ html.lenis body {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: var(--secondary);
+	background: var(--primary);
 	opacity: 40%;
 }
 
@@ -481,8 +481,13 @@ html.lenis body {
 	color: var(--black);
 }
 
+.review-section .mainHeading, .contact-section .mainHeading,
+.article-section .mainHeading {
+	color: var(--black);
+}
+
 .review_card {
-	background: #ffffff;
+	background: var(--section-divider);
 	border: 2px solid var(--primary);
 	padding: 1.875rem;
 }
@@ -546,7 +551,7 @@ html.lenis body {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-}																																											
+}
 
 /* article-section */
 .article_sites {
@@ -574,6 +579,10 @@ html.lenis body {
 	z-index: 1;
 }
 
+.contact-text p {
+	color: var(--black);
+}
+
 .contact-info a * {
 	color: var(--black);
 }
@@ -597,7 +606,7 @@ html.lenis body {
 }
 
 .newsletter_main {
-	background: var(--white);
+	background: var(--section-divider);
 	border: 5px double var(--primary);
 	padding: 1.875rem;
 	overflow: clip;
@@ -605,7 +614,6 @@ html.lenis body {
 
 .newsletter_text .mainHeading {
 	font-size: 1.875rem;
-	color: var(--black);
 }
 
 .newsletterForm {
@@ -628,8 +636,6 @@ html.lenis body {
 /* footer */
 .footer {
 	padding: 16rem 0 0;
-	background: linear-gradient(180deg, var(--primary) 40%, var(--secondary) 100%);
-	background: var(--black);
 }
 
 .footer * {
@@ -729,11 +735,10 @@ html.lenis body {
 /* inner-pages */
 .inner-banner {
 	height: 650px;
-	background: url("../images/banner-bg.png") no-repeat center 100%/ cover fixed;
+	background: url("../images/banner-bg.png") no-repeat center/ cover fixed;
 }
 
 .inner-banner::before {
-	background-image: linear-gradient(360deg, var(--primary) 10%, #07070470 70%);
 }
 
 .inner-banner__content {
@@ -751,11 +756,12 @@ html.lenis body {
 }
 
 .about-inner {
+	background: var(--section-divider);
 	padding: 6rem 0 14rem;
 }
 
 .blog_card {
-	/* background-color: var(--black); */
+	background-color: var(--body-color);
 	box-shadow: 0 0 12px rgb(0 0 0 / 28%);
 	transition: transform 0.3s ease;
 	margin-bottom: 1.875rem;
@@ -821,7 +827,7 @@ html.lenis body {
 }
 
 .contactForm {
-	/* background-color: var(--black); */
+	background-color: var(--body-color);
 	padding: 2rem 1.75rem;
 	border: 5px double var(--primary);
 }
@@ -843,7 +849,7 @@ html.lenis body {
 }
 
 .blog-detail-section .blog_card:hover {
-	transform: translateY(0);	
+	transform: translateY(0);
 }
 
 .blog-detail-section .blog_card:hover .blog_card_img img {
@@ -852,7 +858,7 @@ html.lenis body {
 
 .blog-detail-section .blog_card_img img {
 	aspect-ratio: 16/5;
-	object-position: center;
+	object-position: top;
 }
 
 .blog-detail-section .blog_card_content h4 {
@@ -865,18 +871,22 @@ html.lenis body {
 }
 
 .error {
-    color: #ff0000;
-    margin-bottom: 1rem;
+	color: #ff0000;
+	margin-bottom: 1rem;
 }
 
 #contactFormResult {
-    width: fit-content;
-    margin: 1.25rem 0 0;
+	width: fit-content;
+	margin: 1.25rem 0 0;
 }
 
 #newsletterFormResult {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.about-inner .contact_text .contact-info div p {
+	color: var(--white);
 }
