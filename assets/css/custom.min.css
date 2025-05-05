@@ -355,7 +355,7 @@ html.lenis body {
 /* main-banner */
 .main-banner {
 	height: 1000px;
-	background: url("../images/banner-bg.png") no-repeat center / cover fixed;
+	background: url("../images/banner-bg.png") no-repeat center top / cover fixed;
 	overflow: unset;
 }
 
@@ -735,7 +735,7 @@ html.lenis body {
 /* inner-pages */
 .inner-banner {
 	height: 650px;
-	background: url("../images/banner-bg.png") no-repeat center/ cover fixed;
+	background: url("../images/banner-bg.png") no-repeat center top/ cover fixed;
 }
 
 .inner-banner::before {
